@@ -9,7 +9,7 @@
 
 2. Откройте терминал bash и перейдите в директорию проекта.
     ```bash
-    cd coffee_shop/back/
+    cd NoLegsMobile/
     ```
 
 3. Создайте виртуальное окружение в директории, содержащей файл requirements.txt:
@@ -25,7 +25,7 @@
 
 5. Выполните миграции базы данных:
     ```bash
-    cd backend_api/ 
+    cd NoLegsMobile/
     python manage.py makemigrations
     python manage.py migrate
     ```
@@ -46,7 +46,7 @@
 
 2. Откройте командную строку (cmd) и перейдите в директорию проекта.
     ```cmd
-    cd coffee_shop/back/
+    cd NoLegsMobile/
     ```
 
 3. Создайте виртуальное окружение:
@@ -62,7 +62,7 @@
 
 5. Выполните миграции базы данных:
     ```cmd
-    cd backend_api/
+    cd NoLegsMobile/
     python manage.py makemigrations
     python manage.py migrate
     ```

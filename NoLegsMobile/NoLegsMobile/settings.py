@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'rest_framework_simplejwt',
-
+    'drf_spectacular',
 
     'users',
 ]
@@ -54,8 +54,20 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+#DOC SETTINGS
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'No Legs Mobile',
+    'DESCRIPTION': 'Your API Description',
+    'VERSION': '1.0.0',
+    'SCHEMA_PATH_PREFIX': '/api',
+    # Add more settings as needed
+}
 ROOT_URLCONF = 'NoLegsMobile.urls'
 
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+    # other settings...
+}
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

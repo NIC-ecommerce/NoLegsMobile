@@ -4,6 +4,9 @@ from . import serializers
 from .models import CustomUser
 
 class CustomUserCreateView(generics.CreateAPIView):
+    """
+    Если что переходить по http://127.0.0.1:8000/api/users/create/ и смотреть какие поля надо регать
+    """
     serializer_class = serializers.CustomUserCreateSerializer
 
 class CustomUserListView(generics.ListAPIView):

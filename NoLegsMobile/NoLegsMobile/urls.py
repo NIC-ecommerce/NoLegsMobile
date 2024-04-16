@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
+from chat import routing
 
 
 urlpatterns = [
@@ -31,4 +32,5 @@ urlpatterns = [
 
 
     path('api/users/', include('users.urls'), name='users'),
+    path('ws/', include(routing.websocket_urlpatterns)),
 ]

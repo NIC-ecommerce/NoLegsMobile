@@ -32,18 +32,23 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'daphne',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
     'rest_framework',
     'rest_framework_simplejwt',
     'drf_spectacular',
     'rest_framework_simplejwt.token_blacklist',
+    'channels',
+
 
     'users',
+    'chat',
 ]
 
 MIDDLEWARE = [
@@ -133,6 +138,18 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'NoLegsMobile.wsgi.application'
+ASGI_APPLICATION = "NoLegsMobile.asgi.application"
+
+
+CHANNEL_LAYERS = {
+    'default': {
+        'BACKEND': 'channels.layers.InMemoryChannelLayer',
+        # 'CONFIG': {
+        #     "hosts": [CHANNEL_REDIS_HOST],
+        #     "symmetric_encryption_keys": [SECRET_KEY],
+        #},
+    },
+}
 
 
 # Database
